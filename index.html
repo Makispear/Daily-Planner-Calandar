@@ -16,84 +16,94 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    
     <div class="container">
+        <!-- 9  -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>9AM</p>
+            <p class="nine-oclock-block">9AM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="nineTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 10  -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>10AM</p>
+            <p class="ten-oclock-block">10AM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="tenTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 11  -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>11AM</p>
+            <p class="eleven-oclock-block">11AM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="elevenTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 12  -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>12PM</p>
+            <p class="twelve-oclock-block">12PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="twelveTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 1 -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>1PM</p>
+            <p class="one-oclock-block">1PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="oneTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 2 -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>2PM</p>
+            <p class="two-oclock-block">2PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="twoTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 3 -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>3PM</p>
+            <p class="three-oclock-block">3PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="threeTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
+          <!-- 4 -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-right">
-            <p>4PM</p>
+            <p class="four-oclock-block">4PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="fourTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
         </div>
-        <div class="row w-100 d-flex h-100">
+          <!-- 5  -->
+        <div class="row w-100 d-flex h-100 mb-5">
           <div class="col-lg hour text-right">
-            <p>5PM</p>
+            <p class="five-oclock-block">5PM</p>
           </div>
-          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <textarea name="description" id="fiveTextArea" cols="" rows="3" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
             <i class="fas fa-save m-auto"></i>
           </div>
@@ -103,26 +113,54 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script>
-    var currentTime = () => {
-      var timeNow = moment();
-      setInterval(timeNow, 1000)
-      return timeNow
-    }
-
-    console.log()
-
-    var displayNow = () => { 
+    
+    // DISPLAYS TIME NOW ON TOP OF SCREEN 
+    var displayTimeNow = () => { 
       let timeNow = moment();
-      $('#currentDay').text(timeNow.format('dddd, MMMM do, hh:mm:ss'));
+      $('#currentDay').text(timeNow.format('dddd, MMMM D, h:mmA'));
     }
+    // RESHOW TIME NOW EVERY SECOND 
+    setInterval(displayTimeNow, 1)
 
-    setInterval(displayNow, 1000)
+    // TIME NOW 
+    var timeNow = moment(moment(), "h:mmA").format('h:mm A')._i
+    // SETTING COLOR CODES IN TEXT AREAS
+    // 9
+    var nineOclock = moment("9:00 AM", "h:mm A")
+      if (moment(nineOclock).isBefore(timeNow, 'hour')) {
+        $("#nineTextArea").removeClass("present")      
+        $("#nineTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#nineTextArea").removeClass("future")      
+      } else if (moment(nineOclock).isAfter(timeNow, 'hour')) {
+        $("#nineTextArea").removeClass("present")     
+        $("#nineTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#nineTextArea").addClass("future")     
+      } else if (moment(nineOclock).isSame(timeNow, 'hour')) {
+        $("#nineTextArea").addClass("present")      
+        $("#nineTextArea").removeClass("past")    // if time is present set color to present
+        $("#nineTextArea").removeClass("future")      
+      }
+      // 10 
+      var tenOclock = moment("10:00 AM", "h:mm A")
+      if (moment(tenOclock).isBefore(timeNow, 'hour')) {
+        $("#tenTextArea").removeClass("present")      
+        $("#tenTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#tenTextArea").removeClass("future")      
+      } else if (moment(tenOclock).isAfter(timeNow, 'hour')) {
+        $("#tenTextArea").removeClass("present")     
+        $("#tenTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#tenTextArea").addClass("future")     
+      } else if (moment(tenOclock).isSame(timeNow, 'hour')) {
+        $("#tenTextArea").addClass("present")      
+        $("#tenTextArea").removeClass("past")    // if time is present set color to present
+        $("#tenTextArea").removeClass("future")      
+      }
 
-    var saveToLocalStorage = () => {
-      $('textarea')
-    }
 
-    $("textarea").keydown(saveToLocalStorage())
+//================ testing area ====================
+
+//==================================================
+
 
   </script>
 
