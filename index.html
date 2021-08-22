@@ -155,11 +155,112 @@
         $("#tenTextArea").removeClass("past")    // if time is present set color to present
         $("#tenTextArea").removeClass("future")      
       }
+      //11
+      var elevenOclock = moment("10:00 AM", "h:mm A")
+      if (moment(elevenOclock).isBefore(timeNow, 'hour')) {
+        $("#elevenTextArea").removeClass("present")      
+        $("#elevenTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#elevenTextArea").removeClass("future")      
+      } else if (moment(elevenOclock).isAfter(timeNow, 'hour')) {
+        $("#elevenTextArea").removeClass("present")     
+        $("#elevenTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#elevenTextArea").addClass("future")     
+      } else if (moment(elevenOclock).isSame(timeNow, 'hour')) {
+        $("#elevenTextArea").addClass("present")      
+        $("#elevenTextArea").removeClass("past")    // if time is present set color to present
+        $("#elevenTextArea").removeClass("future")      
+      }
+      //12
+      var twelveOclock = moment("10:00 AM", "h:mm A")
+      if (moment(twelveOclock).isBefore(timeNow, 'hour')) {
+        $("#twelveTextArea").removeClass("present")      
+        $("#twelveTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#twelveTextArea").removeClass("future")      
+      } else if (moment(twelveOclock).isAfter(timeNow, 'hour')) {
+        $("#twelveTextArea").removeClass("present")     
+        $("#twelveTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#twelveTextArea").addClass("future")     
+      } else if (moment(twelveOclock).isSame(timeNow, 'hour')) {
+        $("#twelveTextArea").addClass("present")      
+        $("#twelveTextArea").removeClass("past")    // if time is present set color to present
+        $("#twelveTextArea").removeClass("future")      
+      }
+      //1
+      var oneOclock = moment("10:00 AM", "h:mm A")
+      if (moment(oneOclock).isBefore(timeNow, 'hour')) {
+        $("#oneTextArea").removeClass("present")      
+        $("#oneTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#oneTextArea").removeClass("future")      
+      } else if (moment(oneOclock).isAfter(timeNow, 'hour')) {
+        $("#oneTextArea").removeClass("present")     
+        $("#oneTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#oneTextArea").addClass("future")     
+      } else if (moment(oneOclock).isSame(timeNow, 'hour')) {
+        $("#oneTextArea").addClass("present")      
+        $("#oneTextArea").removeClass("past")    // if time is present set color to present
+        $("#oneTextArea").removeClass("future")      
+      }
+      // 2
+      var twoOclock = moment("10:00 AM", "h:mm A")
+      if (moment(twoOclock).isBefore(timeNow, 'hour')) {
+        $("#twoTextArea").removeClass("present")      
+        $("#twoTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#twoTextArea").removeClass("future")      
+      } else if (moment(twoOclock).isAfter(timeNow, 'hour')) {
+        $("#twoTextArea").removeClass("present")     
+        $("#twoTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#twoTextArea").addClass("future")     
+      } else if (moment(twoOclock).isSame(timeNow, 'hour')) {
+        $("#twoTextArea").addClass("present")      
+        $("#twoTextArea").removeClass("past")    // if time is present set color to present
+        $("#twoTextArea").removeClass("future")      
+      }
+      // 3
+      var threeOclock = moment("10:00 AM", "h:mm A")
+      if (moment(threeOclock).isBefore(timeNow, 'hour')) {
+        $("#threeTextArea").removeClass("present")      
+        $("#threeTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#threeTextArea").removeClass("future")      
+      } else if (moment(threeOclock).isAfter(timeNow, 'hour')) {
+        $("#threeTextArea").removeClass("present")     
+        $("#threeTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#threeTextArea").addClass("future")     
+      } else if (moment(threeOclock).isSame(timeNow, 'hour')) {
+        $("#threeTextArea").addClass("present")      
+        $("#threeTextArea").removeClass("past")    // if time is present set color to present
+        $("#threeTextArea").removeClass("future")      
+      }
+      // 4
+      var fourOclock = moment("10:00 AM", "h:mm A")
+      if (moment(fourOclock).isBefore(timeNow, 'hour')) {
+        $("#fourTextArea").removeClass("present")      
+        $("#fourTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#fourTextArea").removeClass("future")      
+      } else if (moment(fourOclock).isAfter(timeNow, 'hour')) {
+        $("#fourTextArea").removeClass("present")     
+        $("#fourTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#fourTextArea").addClass("future")     
+      } else if (moment(fourOclock).isSame(timeNow, 'hour')) {
+        $("#fourTextArea").addClass("present")      
+        $("#fourTextArea").removeClass("past")    // if time is present set color to present
+        $("#fourTextArea").removeClass("future")      
+      }
+      // 5 
+      var fiveOclock = moment("10:00 AM", "h:mm A")
+      if (moment(fiveOclock).isBefore(timeNow, 'hour')) {
+        $("#fiveTextArea").removeClass("present")      
+        $("#fiveTextArea").addClass("past")       // if time is in the past set color code for past
+        $("#fiveTextArea").removeClass("future")      
+      } else if (moment(fiveOclock).isAfter(timeNow, 'hour')) {
+        $("#fiveTextArea").removeClass("present")     
+        $("#fiveTextArea").removeClass("past")    //  if time is in the future set color code for future 
+        $("#fiveTextArea").addClass("future")     
+      } else if (moment(fiveOclock).isSame(timeNow, 'hour')) {
+        $("#fiveTextArea").addClass("present")      
+        $("#fiveTextArea").removeClass("past")    // if time is present set color to present
+        $("#fiveTextArea").removeClass("future")      
+      }
 
-
-//================ testing area ====================
-
-//==================================================
 
 
   </script>
