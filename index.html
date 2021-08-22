@@ -17,25 +17,112 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>9AM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>10AM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>11AM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>12PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>1PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>2PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>3PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>4PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
+        <div class="row w-100 d-flex h-100">
+          <div class="col-lg hour text-right">
+            <p>5PM</p>
+          </div>
+          <textarea name="description" id="" cols="" rows="1" class="description col col-lg-9 bg-secondary text-dark"></textarea>
+          <div class="col-lg saveBtn d-flex">
+            <i class="fas fa-save m-auto"></i>
+          </div>
+        </div>
     </div>
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script>
-    var now = moment();
+    var currentTime = () => {
+      var timeNow = moment();
+      setInterval(timeNow, 1000)
+      return timeNow
+    }
+
+    console.log()
 
     var displayNow = () => { 
-      let now = moment();
-      $("#currentDay").text(now.format("dddd, MMMM do, hh:mm:ss"));
+      let timeNow = moment();
+      $('#currentDay').text(timeNow.format('dddd, MMMM do, hh:mm:ss'));
     }
+
     setInterval(displayNow, 1000)
 
+    var saveToLocalStorage = () => {
+      $('textarea')
+    }
 
-
-
+    $("textarea").keydown(saveToLocalStorage())
 
   </script>
 
