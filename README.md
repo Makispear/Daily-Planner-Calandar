@@ -3,6 +3,9 @@
 ## description
 
 Work Day Scheduler is a project to help people organize their schedule with ease.
+## links
+* GitHub Pages: https://makispear.github.io/Daily-Planner-Calandar/
+* GitHub Repository: https://github.com/Makispear/Daily-Planner-Calandar
 
 ## Usage
 
@@ -34,4 +37,4 @@ Work Day Scheduler is a project to help people organize their schedule with ease
 
 ## First Look
 
-![ScreenShot of Project](assets/img/HomePage.jpg?raw=true "Home Page")
+![ScreenShot of Project](/img/HomePage.jpg?raw=true)
