@@ -25,11 +25,14 @@ Work Day Scheduler is a project to help people organize their schedule with ease
 
 - JavaScript
 
-## Frameworks Used
+## Frameworks
 
 - Bootstrap 5
 - jQuery
 - Moment.js
+
+## Websites used
+- Font Awesome https://fontawesome.com/
 
 ## Contribution
 
