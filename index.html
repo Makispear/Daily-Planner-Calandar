@@ -16,7 +16,7 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container container-fluid-sm">
+    <div class="container">
         <!-- 9  -->
         <div class="row w-100 d-flex h-100">
           <div class="col-lg hour text-lg-right text-md-center">
@@ -121,45 +121,156 @@
   }
   // RESHOW TIME NOW EVERY SECOND 
   setInterval(displayTimeNow, 1)
-  // TIME NOW 
+  // TIME NOW
   var timeNow = moment(moment(), "h:mmA").format('h:mm A')._i
-  // (9) color codes logic
-    var nineOclock = moment("9:00 AM", "h:mm A")
-    if (moment(nineOclock).isBefore(timeNow, 'hour')) {
-      $("#nineTextArea").removeClass("present")      
-      $("#nineTextArea").addClass("past")
-      $("#nineTextArea").removeClass("future")      
-      } else if (moment(nineOclock).isAfter(timeNow, 'hour')) {
-      $("#nineTextArea").removeClass("present")     
-      $("#nineTextArea").removeClass("past") 
-      $("#nineTextArea").addClass("future")     
-      } else if (moment(nineOclock).isSame(timeNow, 'hour')) {
-      $("#nineTextArea").addClass("present")      
-      $("#nineTextArea").removeClass("past")
-      $("#nineTextArea").removeClass("future")      
-          } // save block 9 logic
-          var saveNine = $(".saveNine")
+  setInterval(() => {
+    // (9) color codes logic
+      var nineOclock = moment("9:00 AM", "h:mm A")
+      if (moment(nineOclock).isBefore(timeNow, 'hour')) {
+        $("#nineTextArea").removeClass("present")      
+        $("#nineTextArea").addClass("past")
+        $("#nineTextArea").removeClass("future")      
+        } else if (moment(nineOclock).isAfter(timeNow, 'hour')) {
+        $("#nineTextArea").removeClass("present")     
+        $("#nineTextArea").removeClass("past") 
+        $("#nineTextArea").addClass("future")     
+        } else if (moment(nineOclock).isSame(timeNow, 'hour')) {
+        $("#nineTextArea").addClass("present")      
+        $("#nineTextArea").removeClass("past")
+        $("#nineTextArea").removeClass("future")      
+            }
+      // (10) color codes logic
+      var tenOclock = moment("10:00 AM", "hh:mm A")
+      if (moment(tenOclock).isBefore(timeNow, 'hour')) {
+        $("#tenTextArea").removeClass("present")      
+        $("#tenTextArea").addClass("past")
+        $("#tenTextArea").removeClass("future")      
+      } else if (moment(tenOclock).isAfter(timeNow, 'hour')) {
+        $("#tenTextArea").removeClass("present")     
+        $("#tenTextArea").removeClass("past") 
+        $("#tenTextArea").addClass("future")     
+      } else if (moment(tenOclock).isSame(timeNow, 'hour')) {
+        $("#tenTextArea").addClass("present")      
+        $("#tenTextArea").removeClass("past")
+        $("#tenTextArea").removeClass("future")      
+            }
+      // (11) color codes logic
+        var elevenOclock = moment("11:00 AM", "hh:mm A")
+        if (moment(elevenOclock).isBefore(timeNow, 'hour')) {
+        $("#elevenTextArea").removeClass("present")      
+        $("#elevenTextArea").addClass("past")
+        $("#elevenTextArea").removeClass("future")      
+        } else if (moment(elevenOclock).isAfter(timeNow, 'hour')) {
+        $("#elevenTextArea").removeClass("present")     
+        $("#elevenTextArea").removeClass("past") 
+        $("#elevenTextArea").addClass("future")     
+        } else if (moment(elevenOclock).isSame(timeNow, 'hour')) {
+        $("#elevenTextArea").addClass("present")      
+        $("#elevenTextArea").removeClass("past")
+        $("#elevenTextArea").removeClass("future")      
+            }
+      // (12) color codes logic
+      var twelveOclock = moment("12:00 PM", "hh:mm A")
+      if (moment(twelveOclock).isBefore(timeNow, 'hour')) {
+        $("#twelveTextArea").removeClass("present")      
+        $("#twelveTextArea").addClass("past")
+        $("#twelveTextArea").removeClass("future")      
+      } else if (moment(twelveOclock).isAfter(timeNow, 'hour')) {
+        $("#twelveTextArea").removeClass("present")     
+        $("#twelveTextArea").removeClass("past") 
+        $("#twelveTextArea").addClass("future")     
+      } else if (moment(twelveOclock).isSame(timeNow, 'hour')) {
+        $("#twelveTextArea").addClass("present")      
+        $("#twelveTextArea").removeClass("past")
+        $("#twelveTextArea").removeClass("future")      
+            }
+      // (1) color codes logic
+      var oneOclock = moment("1:00 PM", "h:mm A")
+      if (moment(oneOclock).isBefore(timeNow, 'hour')) {
+        $("#oneTextArea").removeClass("present")      
+        $("#oneTextArea").addClass("past")
+        $("#oneTextArea").removeClass("future")      
+      } else if (moment(oneOclock).isAfter(timeNow, 'hour')) {
+        $("#oneTextArea").removeClass("present")     
+        $("#oneTextArea").removeClass("past") 
+        $("#oneTextArea").addClass("future")     
+      } else if (moment(oneOclock).isSame(timeNow, 'hour')) {
+        $("#oneTextArea").addClass("present")      
+        $("#oneTextArea").removeClass("past")
+        $("#oneTextArea").removeClass("future")      
+            }
+      // (2) color codes logic
+      var twoOclock = moment("2:00 PM", "h:mm A")
+      if (moment(twoOclock).isBefore(timeNow, 'hour')) {
+        $("#twoTextArea").removeClass("present")      
+        $("#twoTextArea").addClass("past")
+        $("#twoTextArea").removeClass("future")      
+      } else if (moment(twoOclock).isAfter(timeNow, 'hour')) {
+        $("#twoTextArea").removeClass("present")     
+        $("#twoTextArea").removeClass("past") 
+        $("#twoTextArea").addClass("future")     
+      } else if (moment(twoOclock).isSame(timeNow, 'hour')) {
+        $("#twoTextArea").addClass("present")      
+        $("#twoTextArea").removeClass("past")
+        $("#twoTextArea").removeClass("future")      
+            }
+      // (3) color codes logic
+      var threeOclock = moment("3:00 PM", "h:mm A")
+      if (moment(threeOclock).isBefore(timeNow, 'hour')) {
+        $("#threeTextArea").removeClass("present")      
+        $("#threeTextArea").addClass("past")
+        $("#threeTextArea").removeClass("future")      
+      } else if (moment(threeOclock).isAfter(timeNow, 'hour')) {
+        $("#threeTextArea").removeClass("present")     
+        $("#threeTextArea").removeClass("past") 
+        $("#threeTextArea").addClass("future")     
+      } else if (moment(threeOclock).isSame(timeNow, 'hour')) {
+        $("#threeTextArea").addClass("present")      
+        $("#threeTextArea").removeClass("past")
+        $("#threeTextArea").removeClass("future")      
+            }
+      // (4) color codes logic
+      var fourOclock = moment("4:00 PM", "h:mm A")
+      if (moment(fourOclock).isBefore(timeNow, 'hour')) {
+        $("#fourTextArea").removeClass("present")      
+        $("#fourTextArea").addClass("past")
+        $("#fourTextArea").removeClass("future")      
+      } else if (moment(fourOclock).isAfter(timeNow, 'hour')) {
+        $("#fourTextArea").removeClass("present")     
+        $("#fourTextArea").removeClass("past") 
+        $("#fourTextArea").addClass("future")     
+      } else if (moment(fourOclock).isSame(timeNow, 'hour')) {
+        $("#fourTextArea").addClass("present")      
+        $("#fourTextArea").removeClass("past")
+        $("#fourTextArea").removeClass("future")      
+            }
+      // (5) color codes logic 
+      var fiveOclock = moment("5:00 PM", "h:mm A")
+      if (moment(fiveOclock).isBefore(timeNow, 'hour')) {
+        $("#fiveTextArea").removeClass("present")      
+        $("#fiveTextArea").addClass("past")
+        $("#fiveTextArea").removeClass("future")      
+      } else if (moment(fiveOclock).isAfter(timeNow, 'hour')) {
+        $("#fiveTextArea").removeClass("present")     
+        $("#fiveTextArea").removeClass("past") 
+        $("#fiveTextArea").addClass("future")     
+      } else if (moment(fiveOclock).isSame(timeNow, 'hour')) {
+        $("#fiveTextArea").addClass("present")      
+        $("#fiveTextArea").removeClass("past")
+        $("#fiveTextArea").removeClass("future")      
+            }
+  }, 1)
+    
+
+// save block 9 logic
+           var saveNine = $(".saveNine")
           saveNine.click(() => {
           let description = $(`#${timeBlocks[0]}TextArea`).val()
           localStorage.setItem(`${timeBlocks[0]}`, description);
           let textArea = $(`#${timeBlocks[0]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[0]}`))
           })
-    // (10) color codes logic
-    var tenOclock = moment("10:00 AM", "hh:mm A")
-    if (moment(tenOclock).isBefore(timeNow, 'hour')) {
-      $("#tenTextArea").removeClass("present")      
-      $("#tenTextArea").addClass("past")
-      $("#tenTextArea").removeClass("future")      
-    } else if (moment(tenOclock).isAfter(timeNow, 'hour')) {
-      $("#tenTextArea").removeClass("present")     
-      $("#tenTextArea").removeClass("past") 
-      $("#tenTextArea").addClass("future")     
-    } else if (moment(tenOclock).isSame(timeNow, 'hour')) {
-      $("#tenTextArea").addClass("present")      
-      $("#tenTextArea").removeClass("past")
-      $("#tenTextArea").removeClass("future")      
-          } // save block 10 logic
+ // save block 10 logic
           var saveTen = $(`.saveTen`)
           saveTen.click(() => {
           let description = $(`#${timeBlocks[1]}TextArea`).val()
@@ -167,21 +278,7 @@
           let textArea = $(`#${timeBlocks[1]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[1]}`))
           })
-    // (11) color codes logic
-      var elevenOclock = moment("11:00 AM", "hh:mm A")
-      if (moment(elevenOclock).isBefore(timeNow, 'hour')) {
-      $("#elevenTextArea").removeClass("present")      
-      $("#elevenTextArea").addClass("past")
-      $("#elevenTextArea").removeClass("future")      
-      } else if (moment(elevenOclock).isAfter(timeNow, 'hour')) {
-      $("#elevenTextArea").removeClass("present")     
-      $("#elevenTextArea").removeClass("past") 
-      $("#elevenTextArea").addClass("future")     
-      } else if (moment(elevenOclock).isSame(timeNow, 'hour')) {
-      $("#elevenTextArea").addClass("present")      
-      $("#elevenTextArea").removeClass("past")
-      $("#elevenTextArea").removeClass("future")      
-          } //save block 11 logic
+ //save block 11 logic
           var saveEleven = $(`.saveEleven`)
           saveEleven.click(() => {
           let description = $(`#${timeBlocks[2]}TextArea`).val()
@@ -189,21 +286,7 @@
           let textArea = $(`#${timeBlocks[2]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[2]}`))
           })
-    // (12) color codes logic
-    var twelveOclock = moment("12:00 PM", "hh:mm A")
-    if (moment(twelveOclock).isBefore(timeNow, 'hour')) {
-      $("#twelveTextArea").removeClass("present")      
-      $("#twelveTextArea").addClass("past")
-      $("#twelveTextArea").removeClass("future")      
-    } else if (moment(twelveOclock).isAfter(timeNow, 'hour')) {
-      $("#twelveTextArea").removeClass("present")     
-      $("#twelveTextArea").removeClass("past") 
-      $("#twelveTextArea").addClass("future")     
-    } else if (moment(twelveOclock).isSame(timeNow, 'hour')) {
-      $("#twelveTextArea").addClass("present")      
-      $("#twelveTextArea").removeClass("past")
-      $("#twelveTextArea").removeClass("future")      
-          } //save block 12 logic
+ //save block 12 logic
           var saveTwelve = $(`.saveTwelve`)
           saveTwelve.click(() => {
           let description = $(`#${timeBlocks[3]}TextArea`).val()
@@ -211,21 +294,7 @@
           let textArea = $(`#${timeBlocks[3]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[3]}`))
           })
-    // (1) color codes logic
-    var oneOclock = moment("1:00 PM", "h:mm A")
-    if (moment(oneOclock).isBefore(timeNow, 'hour')) {
-      $("#oneTextArea").removeClass("present")      
-      $("#oneTextArea").addClass("past")
-      $("#oneTextArea").removeClass("future")      
-    } else if (moment(oneOclock).isAfter(timeNow, 'hour')) {
-      $("#oneTextArea").removeClass("present")     
-      $("#oneTextArea").removeClass("past") 
-      $("#oneTextArea").addClass("future")     
-    } else if (moment(oneOclock).isSame(timeNow, 'hour')) {
-      $("#oneTextArea").addClass("present")      
-      $("#oneTextArea").removeClass("past")
-      $("#oneTextArea").removeClass("future")      
-          } //save block 1 logic
+ //save block 1 logic
           var saveOne = $(`.saveOne`)
           saveOne.click(() => {
           let description = $(`#${timeBlocks[4]}TextArea`).val()
@@ -233,21 +302,7 @@
           let textArea = $(`#${timeBlocks[4]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[4]}`))
           })
-    // (2) color codes logic
-    var twoOclock = moment("2:00 PM", "h:mm A")
-    if (moment(twoOclock).isBefore(timeNow, 'hour')) {
-      $("#twoTextArea").removeClass("present")      
-      $("#twoTextArea").addClass("past")
-      $("#twoTextArea").removeClass("future")      
-    } else if (moment(twoOclock).isAfter(timeNow, 'hour')) {
-      $("#twoTextArea").removeClass("present")     
-      $("#twoTextArea").removeClass("past") 
-      $("#twoTextArea").addClass("future")     
-    } else if (moment(twoOclock).isSame(timeNow, 'hour')) {
-      $("#twoTextArea").addClass("present")      
-      $("#twoTextArea").removeClass("past")
-      $("#twoTextArea").removeClass("future")      
-          } //save block 2 logic
+ //save block 2 logic
           var saveTwo = $(`.saveTwo`)
           saveTwo.click(() => {
           let description = $(`#${timeBlocks[5]}TextArea`).val()
@@ -255,21 +310,7 @@
           let textArea = $(`#${timeBlocks[5]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[5]}`))
           })
-    // (3) color codes logic
-    var threeOclock = moment("3:00 PM", "h:mm A")
-    if (moment(threeOclock).isBefore(timeNow, 'hour')) {
-      $("#threeTextArea").removeClass("present")      
-      $("#threeTextArea").addClass("past")
-      $("#threeTextArea").removeClass("future")      
-    } else if (moment(threeOclock).isAfter(timeNow, 'hour')) {
-      $("#threeTextArea").removeClass("present")     
-      $("#threeTextArea").removeClass("past") 
-      $("#threeTextArea").addClass("future")     
-    } else if (moment(threeOclock).isSame(timeNow, 'hour')) {
-      $("#threeTextArea").addClass("present")      
-      $("#threeTextArea").removeClass("past")
-      $("#threeTextArea").removeClass("future")      
-          } //save block 3 logic
+ //save block 3 logic
           var saveThree = $(`.saveThree`)
           saveThree.click(() => {
           let description = $(`#${timeBlocks[6]}TextArea`).val()
@@ -277,21 +318,7 @@
           let textArea = $(`#${timeBlocks[6]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[6]}`))
           })
-    // (4) color codes logic
-    var fourOclock = moment("4:00 PM", "h:mm A")
-    if (moment(fourOclock).isBefore(timeNow, 'hour')) {
-      $("#fourTextArea").removeClass("present")      
-      $("#fourTextArea").addClass("past")
-      $("#fourTextArea").removeClass("future")      
-    } else if (moment(fourOclock).isAfter(timeNow, 'hour')) {
-      $("#fourTextArea").removeClass("present")     
-      $("#fourTextArea").removeClass("past") 
-      $("#fourTextArea").addClass("future")     
-    } else if (moment(fourOclock).isSame(timeNow, 'hour')) {
-      $("#fourTextArea").addClass("present")      
-      $("#fourTextArea").removeClass("past")
-      $("#fourTextArea").removeClass("future")      
-          } //save block 4 logic
+ //save block 4 logic
           var saveFour = $(`.saveFour`)
           saveFour.click(() => {
           let description = $(`#${timeBlocks[7]}TextArea`).val()
@@ -299,21 +326,7 @@
           let textArea = $(`#${timeBlocks[7]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[7]}`))
           })
-    // (5) color codes logic 
-    var fiveOclock = moment("5:00 PM", "h:mm A")
-    if (moment(fiveOclock).isBefore(timeNow, 'hour')) {
-      $("#fiveTextArea").removeClass("present")      
-      $("#fiveTextArea").addClass("past")
-      $("#fiveTextArea").removeClass("future")      
-    } else if (moment(fiveOclock).isAfter(timeNow, 'hour')) {
-      $("#fiveTextArea").removeClass("present")     
-      $("#fiveTextArea").removeClass("past") 
-      $("#fiveTextArea").addClass("future")     
-    } else if (moment(fiveOclock).isSame(timeNow, 'hour')) {
-      $("#fiveTextArea").addClass("present")      
-      $("#fiveTextArea").removeClass("past")
-      $("#fiveTextArea").removeClass("future")      
-          } //save block 5 logic
+ //save block 5 logic
           var saveFive = $(`.saveFive`)
           saveFive.click(() => {
           let description = $(`#${timeBlocks[8]}TextArea`).val()
@@ -321,7 +334,7 @@
           let textArea = $(`#${timeBlocks[8]}TextArea`);
           textArea.val(localStorage.getItem(`${timeBlocks[8]}`))
           })
-    
+
     var loadSchedule = () => {
       for (i = 0; i < timeBlocks.length; i++) {
         let Items = localStorage.getItem(`${timeBlocks[i]}`);
