@@ -24,7 +24,7 @@
           </div>
           <textarea name="description" id="nineTextArea" cols="12" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveNine"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 10  -->
@@ -34,7 +34,7 @@
           </div>
           <textarea name="description" id="tenTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveTen"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 11  -->
@@ -44,7 +44,7 @@
           </div>
           <textarea name="description" id="elevenTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveEleven"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 12  -->
@@ -54,7 +54,7 @@
           </div>
           <textarea name="description" id="twelveTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveTwelve"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 1 -->
@@ -64,7 +64,7 @@
           </div>
           <textarea name="description" id="oneTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveOne"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 2 -->
@@ -74,7 +74,7 @@
           </div>
           <textarea name="description" id="twoTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveTwo"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 3 -->
@@ -84,7 +84,7 @@
           </div>
           <textarea name="description" id="threeTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveThree"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 4 -->
@@ -94,7 +94,7 @@
           </div>
           <textarea name="description" id="fourTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveFour"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
           <!-- 5  -->
@@ -104,249 +104,12 @@
           </div>
           <textarea name="description" id="fiveTextArea" cols="" rows="2" class="description col col-lg-9 text-dark"></textarea>
           <div class="col-lg saveBtn d-flex">
-            <i class="fas fa-save m-auto saveFive"></i>
+            <i class="fas fa-save m-auto saveTask"></i>
           </div>
         </div>
     </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script>
-  // TIME BLOCKS
-  const timeBlocks = ['nine', 'ten', 'eleven', 'twelve', 'one', 'two', 'three', 'four', 'five']
-  // DISPLAYS TIME NOW ON TOP OF SCREEN 
-  var displayTimeNow = () => { 
-    let timeNow = moment().format('dddd, MMMM D, h:mmA');
-    $('#currentDay').text(timeNow);
-    return 
-  }
-  // RESHOW TIME NOW EVERY SECOND 
-  setInterval(displayTimeNow, 1)
-  // TIME NOW
-  var timeNow = moment(moment(), "h:mmA").format('h:mm A')._i
-  setInterval(() => {
-    // (9) color codes logic
-      var nineOclock = moment("9:00 AM", "h:mm A")
-      if (moment(nineOclock).isBefore(timeNow, 'hour')) {
-        $("#nineTextArea").removeClass("present")      
-        $("#nineTextArea").addClass("past")
-        $("#nineTextArea").removeClass("future")      
-        } else if (moment(nineOclock).isAfter(timeNow, 'hour')) {
-        $("#nineTextArea").removeClass("present")     
-        $("#nineTextArea").removeClass("past") 
-        $("#nineTextArea").addClass("future")     
-        } else if (moment(nineOclock).isSame(timeNow, 'hour')) {
-        $("#nineTextArea").addClass("present")      
-        $("#nineTextArea").removeClass("past")
-        $("#nineTextArea").removeClass("future")      
-            }
-      // (10) color codes logic
-      var tenOclock = moment("10:00 AM", "hh:mm A")
-      if (moment(tenOclock).isBefore(timeNow, 'hour')) {
-        $("#tenTextArea").removeClass("present")      
-        $("#tenTextArea").addClass("past")
-        $("#tenTextArea").removeClass("future")      
-      } else if (moment(tenOclock).isAfter(timeNow, 'hour')) {
-        $("#tenTextArea").removeClass("present")     
-        $("#tenTextArea").removeClass("past") 
-        $("#tenTextArea").addClass("future")     
-      } else if (moment(tenOclock).isSame(timeNow, 'hour')) {
-        $("#tenTextArea").addClass("present")      
-        $("#tenTextArea").removeClass("past")
-        $("#tenTextArea").removeClass("future")      
-            }
-      // (11) color codes logic
-        var elevenOclock = moment("11:00 AM", "hh:mm A")
-        if (moment(elevenOclock).isBefore(timeNow, 'hour')) {
-        $("#elevenTextArea").removeClass("present")      
-        $("#elevenTextArea").addClass("past")
-        $("#elevenTextArea").removeClass("future")      
-        } else if (moment(elevenOclock).isAfter(timeNow, 'hour')) {
-        $("#elevenTextArea").removeClass("present")     
-        $("#elevenTextArea").removeClass("past") 
-        $("#elevenTextArea").addClass("future")     
-        } else if (moment(elevenOclock).isSame(timeNow, 'hour')) {
-        $("#elevenTextArea").addClass("present")      
-        $("#elevenTextArea").removeClass("past")
-        $("#elevenTextArea").removeClass("future")      
-            }
-      // (12) color codes logic
-      var twelveOclock = moment("12:00 PM", "hh:mm A")
-      if (moment(twelveOclock).isBefore(timeNow, 'hour')) {
-        $("#twelveTextArea").removeClass("present")      
-        $("#twelveTextArea").addClass("past")
-        $("#twelveTextArea").removeClass("future")      
-      } else if (moment(twelveOclock).isAfter(timeNow, 'hour')) {
-        $("#twelveTextArea").removeClass("present")     
-        $("#twelveTextArea").removeClass("past") 
-        $("#twelveTextArea").addClass("future")     
-      } else if (moment(twelveOclock).isSame(timeNow, 'hour')) {
-        $("#twelveTextArea").addClass("present")      
-        $("#twelveTextArea").removeClass("past")
-        $("#twelveTextArea").removeClass("future")      
-            }
-      // (1) color codes logic
-      var oneOclock = moment("1:00 PM", "h:mm A")
-      if (moment(oneOclock).isBefore(timeNow, 'hour')) {
-        $("#oneTextArea").removeClass("present")      
-        $("#oneTextArea").addClass("past")
-        $("#oneTextArea").removeClass("future")      
-      } else if (moment(oneOclock).isAfter(timeNow, 'hour')) {
-        $("#oneTextArea").removeClass("present")     
-        $("#oneTextArea").removeClass("past") 
-        $("#oneTextArea").addClass("future")     
-      } else if (moment(oneOclock).isSame(timeNow, 'hour')) {
-        $("#oneTextArea").addClass("present")      
-        $("#oneTextArea").removeClass("past")
-        $("#oneTextArea").removeClass("future")      
-            }
-      // (2) color codes logic
-      var twoOclock = moment("2:00 PM", "h:mm A")
-      if (moment(twoOclock).isBefore(timeNow, 'hour')) {
-        $("#twoTextArea").removeClass("present")      
-        $("#twoTextArea").addClass("past")
-        $("#twoTextArea").removeClass("future")      
-      } else if (moment(twoOclock).isAfter(timeNow, 'hour')) {
-        $("#twoTextArea").removeClass("present")     
-        $("#twoTextArea").removeClass("past") 
-        $("#twoTextArea").addClass("future")     
-      } else if (moment(twoOclock).isSame(timeNow, 'hour')) {
-        $("#twoTextArea").addClass("present")      
-        $("#twoTextArea").removeClass("past")
-        $("#twoTextArea").removeClass("future")      
-            }
-      // (3) color codes logic
-      var threeOclock = moment("3:00 PM", "h:mm A")
-      if (moment(threeOclock).isBefore(timeNow, 'hour')) {
-        $("#threeTextArea").removeClass("present")      
-        $("#threeTextArea").addClass("past")
-        $("#threeTextArea").removeClass("future")      
-      } else if (moment(threeOclock).isAfter(timeNow, 'hour')) {
-        $("#threeTextArea").removeClass("present")     
-        $("#threeTextArea").removeClass("past") 
-        $("#threeTextArea").addClass("future")     
-      } else if (moment(threeOclock).isSame(timeNow, 'hour')) {
-        $("#threeTextArea").addClass("present")      
-        $("#threeTextArea").removeClass("past")
-        $("#threeTextArea").removeClass("future")      
-            }
-      // (4) color codes logic
-      var fourOclock = moment("4:00 PM", "h:mm A")
-      if (moment(fourOclock).isBefore(timeNow, 'hour')) {
-        $("#fourTextArea").removeClass("present")      
-        $("#fourTextArea").addClass("past")
-        $("#fourTextArea").removeClass("future")      
-      } else if (moment(fourOclock).isAfter(timeNow, 'hour')) {
-        $("#fourTextArea").removeClass("present")     
-        $("#fourTextArea").removeClass("past") 
-        $("#fourTextArea").addClass("future")     
-      } else if (moment(fourOclock).isSame(timeNow, 'hour')) {
-        $("#fourTextArea").addClass("present")      
-        $("#fourTextArea").removeClass("past")
-        $("#fourTextArea").removeClass("future")      
-            }
-      // (5) color codes logic 
-      var fiveOclock = moment("5:00 PM", "h:mm A")
-      if (moment(fiveOclock).isBefore(timeNow, 'hour')) {
-        $("#fiveTextArea").removeClass("present")      
-        $("#fiveTextArea").addClass("past")
-        $("#fiveTextArea").removeClass("future")      
-      } else if (moment(fiveOclock).isAfter(timeNow, 'hour')) {
-        $("#fiveTextArea").removeClass("present")     
-        $("#fiveTextArea").removeClass("past") 
-        $("#fiveTextArea").addClass("future")     
-      } else if (moment(fiveOclock).isSame(timeNow, 'hour')) {
-        $("#fiveTextArea").addClass("present")      
-        $("#fiveTextArea").removeClass("past")
-        $("#fiveTextArea").removeClass("future")      
-            }
-  }, 1)
-    
-
-// save block 9 logic
-           var saveNine = $(".saveNine")
-          saveNine.click(() => {
-          let description = $(`#${timeBlocks[0]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[0]}`, description);
-          let textArea = $(`#${timeBlocks[0]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[0]}`))
-          })
- // save block 10 logic
-          var saveTen = $(`.saveTen`)
-          saveTen.click(() => {
-          let description = $(`#${timeBlocks[1]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[1]}`, description);
-          let textArea = $(`#${timeBlocks[1]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[1]}`))
-          })
- //save block 11 logic
-          var saveEleven = $(`.saveEleven`)
-          saveEleven.click(() => {
-          let description = $(`#${timeBlocks[2]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[2]}`, description);
-          let textArea = $(`#${timeBlocks[2]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[2]}`))
-          })
- //save block 12 logic
-          var saveTwelve = $(`.saveTwelve`)
-          saveTwelve.click(() => {
-          let description = $(`#${timeBlocks[3]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[3]}`, description);
-          let textArea = $(`#${timeBlocks[3]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[3]}`))
-          })
- //save block 1 logic
-          var saveOne = $(`.saveOne`)
-          saveOne.click(() => {
-          let description = $(`#${timeBlocks[4]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[4]}`, description);
-          let textArea = $(`#${timeBlocks[4]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[4]}`))
-          })
- //save block 2 logic
-          var saveTwo = $(`.saveTwo`)
-          saveTwo.click(() => {
-          let description = $(`#${timeBlocks[5]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[5]}`, description);
-          let textArea = $(`#${timeBlocks[5]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[5]}`))
-          })
- //save block 3 logic
-          var saveThree = $(`.saveThree`)
-          saveThree.click(() => {
-          let description = $(`#${timeBlocks[6]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[6]}`, description);
-          let textArea = $(`#${timeBlocks[6]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[6]}`))
-          })
- //save block 4 logic
-          var saveFour = $(`.saveFour`)
-          saveFour.click(() => {
-          let description = $(`#${timeBlocks[7]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[7]}`, description);
-          let textArea = $(`#${timeBlocks[7]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[7]}`))
-          })
- //save block 5 logic
-          var saveFive = $(`.saveFive`)
-          saveFive.click(() => {
-          let description = $(`#${timeBlocks[8]}TextArea`).val()
-          localStorage.setItem(`${timeBlocks[8]}`, description);
-          let textArea = $(`#${timeBlocks[8]}TextArea`);
-          textArea.val(localStorage.getItem(`${timeBlocks[8]}`))
-          })
-
-    var loadSchedule = () => {
-      for (i = 0; i < timeBlocks.length; i++) {
-        let Items = localStorage.getItem(`${timeBlocks[i]}`);
-        if (Items === null) {
-        } else if (Items) {
-          let textArea = $(`#${timeBlocks[i]}TextArea`);
-          textArea.val(Items)
-        }
-      }
-    }
-    loadSchedule()
-  </script>
-
+  <script src="assets/JavaScript/script.js"></script>
   </body>
 </html>
