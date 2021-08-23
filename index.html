@@ -146,7 +146,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[0]}`))
           })
     // (10) color codes logic
-    var tenOclock = moment("10:00 AM", "h:mm A")
+    var tenOclock = moment("10:00 AM", "hh:mm A")
     if (moment(tenOclock).isBefore(timeNow, 'hour')) {
       $("#tenTextArea").removeClass("present")      
       $("#tenTextArea").addClass("past")
