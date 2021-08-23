@@ -40,4 +40,4 @@ Work Day Scheduler is a project to help people organize their schedule with ease
 
 ## First Look
 
-![ScreenShot of Project](/img/HomePage.jpg?raw=true)
+![ScreenShot of Project](/assets/img/HomePage.jpg?raw=true)
