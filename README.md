@@ -24,3 +24,6 @@ Work Day Scheduler is a project to help people organize their schedule with ease
 
 ## Contribution
 * Maki A. Maki
+
+## First Look
+![ScreenShot of Project](/assets/img/HomePage.png?raw=true "Home Page")
