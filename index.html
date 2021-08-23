@@ -168,7 +168,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[1]}`))
           })
     // (11) color codes logic
-      var elevenOclock = moment("10:00 AM", "h:mm A")
+      var elevenOclock = moment("11:00 AM", "hh:mm A")
       if (moment(elevenOclock).isBefore(timeNow, 'hour')) {
       $("#elevenTextArea").removeClass("present")      
       $("#elevenTextArea").addClass("past")
@@ -190,7 +190,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[2]}`))
           })
     // (12) color codes logic
-    var twelveOclock = moment("10:00 AM", "h:mm A")
+    var twelveOclock = moment("12:00 PM", "hh:mm A")
     if (moment(twelveOclock).isBefore(timeNow, 'hour')) {
       $("#twelveTextArea").removeClass("present")      
       $("#twelveTextArea").addClass("past")
@@ -212,7 +212,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[3]}`))
           })
     // (1) color codes logic
-    var oneOclock = moment("10:00 AM", "h:mm A")
+    var oneOclock = moment("1:00 PM", "h:mm A")
     if (moment(oneOclock).isBefore(timeNow, 'hour')) {
       $("#oneTextArea").removeClass("present")      
       $("#oneTextArea").addClass("past")
@@ -234,7 +234,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[4]}`))
           })
     // (2) color codes logic
-    var twoOclock = moment("10:00 AM", "h:mm A")
+    var twoOclock = moment("2:00 PM", "h:mm A")
     if (moment(twoOclock).isBefore(timeNow, 'hour')) {
       $("#twoTextArea").removeClass("present")      
       $("#twoTextArea").addClass("past")
@@ -256,7 +256,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[5]}`))
           })
     // (3) color codes logic
-    var threeOclock = moment("10:00 AM", "h:mm A")
+    var threeOclock = moment("3:00 PM", "h:mm A")
     if (moment(threeOclock).isBefore(timeNow, 'hour')) {
       $("#threeTextArea").removeClass("present")      
       $("#threeTextArea").addClass("past")
@@ -278,7 +278,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[6]}`))
           })
     // (4) color codes logic
-    var fourOclock = moment("10:00 AM", "h:mm A")
+    var fourOclock = moment("4:00 PM", "h:mm A")
     if (moment(fourOclock).isBefore(timeNow, 'hour')) {
       $("#fourTextArea").removeClass("present")      
       $("#fourTextArea").addClass("past")
@@ -300,7 +300,7 @@
           textArea.val(localStorage.getItem(`${timeBlocks[7]}`))
           })
     // (5) color codes logic 
-    var fiveOclock = moment("10:00 AM", "h:mm A")
+    var fiveOclock = moment("5:00 PM", "h:mm A")
     if (moment(fiveOclock).isBefore(timeNow, 'hour')) {
       $("#fiveTextArea").removeClass("present")      
       $("#fiveTextArea").addClass("past")
